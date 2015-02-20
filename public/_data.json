@@ -2,5 +2,13 @@
   "index": {
     "layout": "_home-layout",
     "title": "PostHorse Style Library"
+  },
+  "article": {
+    "layout": "_home-layout",
+    "title": "Standard PostHorse Article"
+  },
+  "extensive-text": {
+    "layout": "_home-layout",
+    "title": "Getting text right in the grid"
   }
 }
