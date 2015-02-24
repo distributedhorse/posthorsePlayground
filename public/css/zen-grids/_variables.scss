@@ -3,10 +3,10 @@
 //
 
 // Specify the number of columns in the grid. @see http://next.zengrids.com/reference/grids/#zen-columns
-$zen-columns                      : 1           !default;
+$zen-columns                      : 12           !default;
 
 // Specify the width of the gutters (as padding). @see http://next.zengrids.com/reference/grids/#zen-gutters
-$zen-gutters                      : 20px        !default;
+$zen-gutters                      : 3em        !default;
 
 // Specify the gutter method. Can be padding or margin.
 $zen-gutter-method                : padding     !default;

@@ -7,8 +7,9 @@
 @import "./variables";
 // Import the helper functions.
 @import "./functions";
-@import "./internal/functions-compass-polyfill";
-
+//- comment this out because it's causing a compile error...
+// @import "internal/functions-compass-polyfill"; 
+// @import "zen-grids/background";
 
 //
 // Apply this to create a grid container element.

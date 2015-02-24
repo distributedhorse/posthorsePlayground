@@ -4,3 +4,51 @@
 	max-width: 34em; //- 544px / 16px = 34em >> 71 chars width 
 	padding: 6em; //- multiple of line-height of 1.5em
 }
+
+@media (min-width: 920px) {
+
+$zen-columns: 12; // Set the number of columns in the grid.
+$zen-gutters: 3em; // Set the gutter size. A half-gutter is used on each side of each column.
+
+.container {
+ @include zen-grid-container(); // Apply this mixin to the container.
+}
+
+article.extensive {
+  // first value is width, second value is position
+ 	@include zen-grid-item(7, 1);
+ 	max-width: 34em;
+ 	margin-top: 4.5em;
+}
+
+aside {
+	@include zen-grid-item(4,8);
+	display: block;
+	background-color: red;
+	margin-top: 4.5em;
+}
+
+}
+
+@media (max-width: 919px) {
+
+$zen-columns: 1; // Set the number of columns in the grid.
+$zen-gutters: 3em; // Set the gutter size. A half-gutter is used on each side of each column.
+
+.container {
+ @include zen-grid-container(); // Apply this mixin to the container.
+}
+
+article.extensive {
+  // first value is width, second value is position
+ 	max-width: 31em;
+ 	margin: auto;
+}
+
+aside {
+	display: block;
+	background-color: red;
+	clear: both;
+}
+
+}
