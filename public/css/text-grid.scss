@@ -1,0 +1,7 @@
+//- import all the partials (ie the files name _fileName.scss in the css folder)
+
+@import 'all';
+
+//- text grid styles overriding everything else previously
+
+@import 'text-grid-rhythm';

@@ -4,11 +4,11 @@
     "title": "PostHorse Style Library"
   },
   "article": {
-    "layout": "_home-layout",
+    "layout": "_typographic-grid-header",
     "title": "Standard PostHorse Article"
   },
-  "extensive-text": {
-    "layout": "_home-layout",
-    "title": "Getting text right in the grid"
+  "text-grid-rhythm-layout": {
+    "layout": "_typographic-grid-header",
+    "title": "Getting text right in a grid"
   }
 }

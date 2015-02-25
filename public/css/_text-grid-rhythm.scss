@@ -1,0 +1,260 @@
+//- the layout for a basic page of texty content, with some images and some figures
+
+body {
+	font-size: 100%; //- Assumes / guesses UA is set at 16px...
+}
+
+//- Assumes UA set at 16px and a multiplier of 1.4
+$ua-px: 16;
+$base-font-px: 16 * 1.4;
+
+$base-font-em: ($base-font-px / $ua-px);
+
+//- 'desktop', like that means anything
+
+p {
+	font-size: ($base-font-em) * 1em;
+	line-height: ($base-font-em * 1.25) * 1em;
+	margin-bottom: ($base-font-em * 1.25) * 1em;
+}
+
+h1 {
+    font-size: ($base-font-em)  * 3em; 
+    line-height: 1.2em;
+    margin-bottom: ($base-font-px * 3) * 1px;
+    border-bottom: (($base-font-px / 12)) * 1px solid black;
+    padding-bottom: ($base-font-px * 2) * 1px;
+}
+h2 {
+    font-size: ($base-font-em)  * 2.25em; 
+    line-height: 1.2em;
+    margin-bottom: ($base-font-px) * 1px;
+    margin-top: ($base-font-px * 3) * 1px;
+}
+h3 {
+    font-size: ($base-font-em)  * 1.75em; 
+    line-height: 1em;
+    margin-bottom: ($base-font-px) * 1px;
+    margin-top: ($base-font-px * 3) * 1px;
+}
+h4 {
+    font-size: ($base-font-em)  * 1.3125em; 
+    line-height: 1em;
+    margin-bottom: ($base-font-px) * 1px;
+    margin-top: ($base-font-px * 2) * 1px;
+}
+h5 {
+    font-size: ($base-font-em)  * 1.125em; 
+    line-height: 1em;
+    margin-bottom: ($base-font-px) * 1px;
+    margin-top: ($base-font-px * 2) * 1px;
+}
+h6 {
+    font-size: ($base-font-em)  * 1em; 
+    line-height: 1em;
+    margin-bottom: ($base-font-px) * 1px;
+    margin-top: ($base-font-px * 2) * 1px;
+}
+
+ol, ul, dl , pre {
+	font-size: ($base-font-em) * 1em;
+	line-height: ($base-font-em * 1.2) * 1em;
+	margin-bottom: ($base-font-px * 2) * 1px;
+}
+
+blockquote {
+	font-size: ($base-font-em) * 1em;
+	line-height: ($base-font-em * 1.2) * 1em;
+	margin-bottom: ($base-font-em * 1) * 1em;
+	padding-left: ($base-font-em) * 2em;
+	padding-top: ($base-font-em) * 0.5em;
+	padding-bottom: ($base-font-em) * 0.5em;
+	padding-right: ($base-font-em) * 1em;
+	border-left: (($base-font-px / 4) * 1px) solid black;	
+	background-color: yellow;
+	display: inline-block;
+}
+
+blockquote > cite {
+	float: right;
+	padding: (($base-font-em) * 2em) (($base-font-em) * 1em) 0 (($base-font-em) * 0.5em);
+	font-size: smaller;
+}
+
+blockquote > p, a, cite {
+	font-size: inherit;
+}
+
+blockquote > p {
+	margin-bottom: (($base-font-em * 1.25) * 1rem);
+}
+
+pre {
+	padding-left: ($base-font-em) * 1em;
+	padding-right: ($base-font-em) * 1em;
+	padding-top: ($base-font-em) * 1em;
+	padding-bottom: ($base-font-em) * 1em;
+	background-color: yellow;
+}
+
+a {
+	text-decoration: none;
+	border-bottom: 1px solid black;
+	padding-bottom: 3px;
+}
+
+.text-container {
+ 	max-width: 43em;
+ 	padding-top: ($base-font-em * 2) * 1em;
+ 	padding-bottom: ($base-font-em * 2) * 1em;
+ 	margin: auto;
+ 	padding-left: $base-font-em * 1em;
+ 	padding-right: $base-font-em * 1em;
+}
+
+.article-teaser {
+	font-size: ($base-font-em) * 1.75em;
+	line-height: ($base-font-em * 1) * 1em;
+	margin-bottom: ($base-font-em * 1.25) * 1em;
+	text-transform: uppercase;
+	font-style: bold;
+}
+
+hr.final {
+	margin-top: ($base-font-em * 6) * 1em;
+}
+
+sup > a {
+	border: none;
+	padding: 6px 4px 4px 6px;
+	background-color: red;
+}
+
+
+
+
+
+
+
+//- This is where the small screen stuff happens
+
+@media (max-width: 530px) {
+
+p {
+	font-size: ($base-font-em * 0.7) * 1em;
+	line-height: ($base-font-em * 1.1) * 1em;
+	margin-bottom: ($base-font-em * 1.25) * 1em;
+}
+
+h1 {
+    font-size: ($base-font-em * 0.6)  * 3em; 
+    text-align: center;
+    line-height: 1.2em;
+    margin-bottom: ($base-font-px * 3) * 1px;
+    border-bottom: (($base-font-px / 12)) * 1px solid black;
+    padding-bottom: ($base-font-px * 2) * 1px;
+}
+h2 {
+    font-size: ($base-font-em * 0.6)  * 2.25em; 
+    line-height: 1.2em;
+    margin-bottom: ($base-font-px) * 1px;
+    margin-top: ($base-font-px * 3) * 1px;
+}
+h3 {
+    font-size: ($base-font-em * 0.6)  * 1.75em; 
+    line-height: 1em;
+    margin-bottom: ($base-font-px) * 1px;
+    margin-top: ($base-font-px * 3) * 1px;
+}
+h4 {
+    font-size: ($base-font-em)  * 1.3125em; 
+    line-height: 1em;
+    margin-bottom: ($base-font-px) * 1px;
+    margin-top: ($base-font-px * 2) * 1px;
+}
+h5 {
+    font-size: ($base-font-em)  * 1.125em; 
+    line-height: 1em;
+    margin-bottom: ($base-font-px) * 1px;
+    margin-top: ($base-font-px * 2) * 1px;
+}
+h6 {
+    font-size: ($base-font-em)  * 1em; 
+    line-height: 1em;
+    margin-bottom: ($base-font-px) * 1px;
+    margin-top: ($base-font-px * 2) * 1px;
+}
+
+ol, ul, dl , pre {
+	font-size: ($base-font-em * 0.8) * 1em;
+	line-height: ($base-font-em * 1.2) * 1em;
+	margin-bottom: ($base-font-px * 2) * 1px;
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 1em;
+}
+
+blockquote {
+	font-size: ($base-font-em * 0.7) * 1em;
+	line-height: ($base-font-em * 1.25) * 1em;
+	margin-bottom: ($base-font-em) * 1em;
+	padding-left: ($base-font-em) * 0.4em;
+	padding-top: ($base-font-em) * 0.5em;
+	padding-bottom: ($base-font-em) * 0.5em;
+	padding-right: ($base-font-em) * 0.4em;
+	border-left: none;	
+	background-color: yellow;
+	display: inline-block;
+}
+
+blockquote > cite {
+	float: right;
+	padding: (($base-font-em) * 2em) (($base-font-em) * 1em) 0 (($base-font-em) * 0.5em);
+	font-size: smaller;
+}
+
+blockquote > p, a, cite {
+	font-size: inherit;
+}
+
+blockquote > p {
+	margin-bottom: (($base-font-em * 1.25) * 1rem);
+}
+
+pre {
+	padding-left: ($base-font-em) * 1em;
+	padding-right: ($base-font-em) * 1em;
+	padding-top: ($base-font-em) * 1em;
+	padding-bottom: ($base-font-em) * 1em;
+	background-color: yellow;
+}
+
+a {
+	text-decoration: none;
+	border-bottom: 1px solid black;
+	padding-bottom: 3px;
+}
+
+.text-container {
+ 	max-width: 43em;
+ 	padding-top: ($base-font-em * 2) * 1em;
+ 	padding-bottom: ($base-font-em * 2) * 1em;
+ 	margin: auto;
+ 	padding-left: $base-font-em * 1em;
+ 	padding-right: $base-font-em * 1em;
+}
+
+.article-teaser {
+	font-size: ($base-font-em * 0.6) * 1.75em;
+	line-height: ($base-font-em * 1) * 1em;
+	margin-bottom: ($base-font-em * 1.25) * 1em;
+	text-transform: uppercase;
+	font-style: bold;
+	text-align: center;
+}
+
+}
+
+
